@@ -1,0 +1,19 @@
+.nav {
+  // border-bottom: var(#{"--1px-border-gray-opague"});
+
+  .nav__wrapper {
+    padding: 1.13rem 9.38rem;
+    justify-content: space-around;
+
+    .img__container {
+      width: 22em;
+      height: 2.75em;
+
+      img {
+        height: 100%;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+}

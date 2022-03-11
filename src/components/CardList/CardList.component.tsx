@@ -6,7 +6,7 @@ import styles from "./CardList.module.scss";
 import LazyLoad from "react-lazyload";
 type Props = {};
 
-const Items = Array.from(Array(10000).keys());
+const Items = Array.from(Array(8).keys());
 export const CardList = (props: Props) => {
     return (
         <div className={`${styles["card__list__wrapper"]} grid`}>
