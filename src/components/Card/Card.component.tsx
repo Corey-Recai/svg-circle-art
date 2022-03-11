@@ -22,14 +22,7 @@ export const Card = (props: Props) => {
         const animationTimer = setTimeout(() => animateImage(), changeTime);
 
         return () => clearTimeout(animationTimer);
-    }, [
-        svgWidth,
-        svgHeight,
-        setTotalPixels,
-        setSvgWidth,
-        setSvgHeight,
-        setTotalPixels,
-    ]);
+    }, [svgWidth, svgHeight, setSvgWidth, setSvgHeight]);
 
     const getRandomNumber = (min: number, max: number) =>
         Math.floor(Math.random() * (max - min)) + min;
