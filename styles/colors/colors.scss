@@ -1,0 +1,17 @@
+@import "../variables/variables.scss";
+/* Colors */
+
+/* Background Colors */
+
+@each $key, $color in $colors {
+  .bg-#{$key} {
+    background-color: var(--#{$key}, #{$color});
+  }
+}
+
+/* Text Colors */
+@each $key, $color in $colors {
+  .text-#{$key} {
+    color: var(--#{$key}, #{$color});
+  }
+}

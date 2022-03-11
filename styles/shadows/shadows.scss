@@ -1,0 +1,7 @@
+@import "../variables/variables.scss";
+
+@each $key, $shadow in $boxShadows {
+  .#{$key} {
+    box-shadow: #{$shadow};
+  }
+}

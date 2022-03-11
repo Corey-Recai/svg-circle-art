@@ -1,0 +1,72 @@
+@import '../variables/variables.scss';
+
+/* Text Transforms */
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+
+.full-width-text {
+  text-transform: full-width;
+}
+
+.full-size-kana-text {
+  text-transform: full-size-kana;
+}
+
+/* Text Decorations */
+
+.plain-text {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+h1{
+  font-size: var(--fs-800, map-get($fontSizes , "fs-800"));
+}
+
+h2{
+  font-size: var(--fs-700, map-get($fontSizes , "fs-700"));
+}
+
+h3{
+  font-size: var(--fs-600, map-get($fontSizes , "fs-600"));
+}
+
+h4{
+  font-size: var(--fs-500, map-get($fontSizes , "fs-500"));
+}
+
+h5{
+  font-size: var(--fs-400, map-get($fontSizes , "fs-400"));
+}
+
+
+/* Font Sizes */
+@each $key, $fontSize in $fontSizes {
+  .#{$key} {
+    font-size: var(--#{$key},#{$fontSize});
+  }
+}
+
+@each $key, $fontWeight in $fontWeights {
+  .#{$key}{
+    font-weight: var(--#{$key}, #{$fontWeight});
+  }
+}
+

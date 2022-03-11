@@ -1,0 +1,7 @@
+.card__list__wrapper {
+  grid-template-columns: repeat(auto-fit, 24em);
+  justify-content: space-around;
+
+  gap: 1em;
+  padding: 1.5em;
+}

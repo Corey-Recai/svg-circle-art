@@ -1,0 +1,32 @@
+/* Utility Classes */
+.rounded {
+  border-radius: 1.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  padding-inline: 2em; // inline padding (horizontal axis)
+  margin-inline: auto; // inline margin (horizontal axis)
+
+  max-width: var(--max-width, 90%);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+

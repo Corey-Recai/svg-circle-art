@@ -1,0 +1,14 @@
+/*  Margin */
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+
+/* Flow */
+
+.flow {
+  > *:not(:first-child) {
+    margin-top: 1rem;
+  }
+}

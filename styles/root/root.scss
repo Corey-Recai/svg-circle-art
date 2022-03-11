@@ -1,0 +1,24 @@
+@import '../variables/variables.scss';
+
+:root{
+  /* Colors */
+  @each $key, $color in $colors {
+    --#{$key}: #{$color};
+  }
+
+  /* Font Sizes */
+  @each $key, $fontSize in $fontSizes {
+    --#{$key}: #{$fontSize};
+  }
+
+  /* Border Colors */
+  @each $key, $color in $colors {
+    --#{"1px-border"}-#{$key}: 1px solid #{$color};
+  }
+
+  /* Box shadows */
+  @each $key, $shadow in $boxShadows {
+    --#{$key}: #{$shadow};
+  }
+
+}
