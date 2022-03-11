@@ -13,13 +13,9 @@ export const Card = (props: Props) => {
     const svgRef = useRef<SVGSVGElement>(null);
 
     useEffect(() => {
-        const changeTime = 25 * 1000;
-
         generateImage();
 
-        animateImage();
-
-        const animationTimer = setTimeout(() => animateImage(), changeTime);
+        const animationTimer = animateImage();
 
         return () => clearTimeout(animationTimer);
     }, [svgWidth, svgHeight, setSvgWidth, setSvgHeight]);
@@ -32,7 +28,9 @@ export const Card = (props: Props) => {
     const getRandomColor = () =>
         `rgba(${getRandomRgbValue()}, ${getRandomRgbValue()}, ${getRandomRgbValue()}, ${Math.random()})`;
 
-    const animateImage = () => {
+    const animateImage = (): NodeJS.Timeout => {
+        const changeTime = 10 * 1000;
+
         d3.select(svgRef.current)
             .selectAll("circle")
             .each(function () {
@@ -40,6 +38,7 @@ export const Card = (props: Props) => {
                     .attr("fill", getRandomColor())
                     .attr("r", `${Math.random()}em`);
             });
+        return setTimeout(() => animateImage(), changeTime);
     };
 
     const generateImage = () => {
